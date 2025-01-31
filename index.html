@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>BestFlix | O streaming mais bonito que o Netflix</title>
+</head>
+<body onload="loadProductions()">
+    <header>
+        <div class="container main-header"> 
+            <a href="/bestflix/">
+            <div id="logo">
+                <svg width="50px" height="50px" viewBox="0 0 50 50" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" overflow="inherit"><path d="M42.215 13h-5.674l5.709-5.474-5.648-5.526h-7.994l5.727 5.473-5.871 5.527h-6.789l5.838-5.474-5.767-5.526h-8.131l5.727 5.473-5.879 5.527h-5.754l5.841-5.474-5.778-5.526h-5.772v46h46v-46h-5.642l5.642 5.504-5.785 5.496zm-.215 29h-34v-6h34v6zm0-11h-34v-6h34v6z"/></svg>
+                <h1><span>Best</span>Flix</h1>
+            </div>
+            </a>
+
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="/bestflix" class="active">Home</a></li>
+                    <li><a href="/bestflix">Movies</a></li>
+                    <li><a href="/bestflix">Series</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <header class="container flex-sb" id="content-header">
+            <div class="breadcrumb"> </div>
+            <button onclick="showModal('#modal-cadastrar')"> Adicionar Produção</button>
+        </header>
+
+        <section class="container">
+            <h1 class="section-title">Produções</h1>
+            <article id="productions">
+                <div class="card-movie">
+                </div>
+
+                <div class="card-movie">
+                </div>
+                
+                <div class="card-movie">
+                </div>
+
+                <div class="card-movie">
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+        <div class="modal-body">
+            <h1>Cadastrar Produção</h1>
+            <form onsubmit="insert(event)">
+                <label>Título:</label>
+                <input type="text" name="title">
+                <label>Descrição:</label>
+                <input type="text" name="description">
+                <label>Categoria:</label>
+                <input type="text" name="category">
+                <label>Capa:</label>
+                <input type="text" name="cover">
+                <label>Classificação:</label>
+                <input type="text" name="classification"> <br>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-editar" onclick="hideModal('#modal-editar', event)">
+        <div class="modal-body">
+            <h1>Editar Produção</h1>
+            <form onsubmit="edit(event)">
+                <label>Título:</label>
+                <input type="text" name="title">
+                <label>Descrição:</label>
+                <input type="text" name="description">
+                <label>Categoria:</label>
+                <input type="text" name="category">
+                <label>Capa:</label>
+                <input type="text" name="cover">
+                <label>Classificação:</label>
+                <input type="text" name="classification">
+                <input type="hidden" name="id"/>
+                <br>
+                <button type="submit">Editar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© Copyright BestFlix | Todos os direitos reservados</p>
+        <p>Kevin Artz</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
