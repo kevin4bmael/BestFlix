@@ -1,7 +1,7 @@
 <h1>Bestflix</h1>
 
 <h2>About</h2>
-<p>A website where you can list your favorite movies!</p>
+<p>A platform where you can list your favorite movies!</p>
 
 ##  Tecnologies
 <div>
